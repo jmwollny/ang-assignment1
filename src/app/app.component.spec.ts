@@ -1,11 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { SuccessComponent } from './success/success.component';
+import { WarningComponent } from './warning/warning.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, SuccessComponent, WarningComponent
       ],
     }).compileComponents();
   });
@@ -16,16 +18,23 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ang-assignment1'`, () => {
+  it(`should render the title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('ang-assignment1');
   });
 
-  it('should render title', () => {
+  it('should render warning', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ang-assignment1 app is running!');
+    expect(compiled.querySelector('warning-alert')?.textContent).toContain('Warning!!');
+  });
+
+  it('should render success', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('success-alert')?.textContent).toContain('Success!!');
   });
 });
