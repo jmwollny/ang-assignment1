@@ -28,13 +28,13 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('warning-alert')?.textContent).toContain('Warning!!');
+    expect(compiled.querySelector('app-warning-alert')?.textContent).toContain('Warning!!');
   });
 
   it('should render success', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('success-alert')?.textContent).toContain('Success!!');
+    expect(compiled.querySelector('app-success-alert')?.textContent).toContain('Success!!');
   });
 });

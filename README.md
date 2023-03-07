@@ -52,3 +52,5 @@ branch 'master' set up to track 'origin/master'.
 
 # Building a simple pipeline
 https://serengetitech.com/tech/configuring-angular-jenkins-and-gitlab-for-ci-cd/
+
+docker build -f ang-assignment1.Dockerfile . -t ng-test-docker
