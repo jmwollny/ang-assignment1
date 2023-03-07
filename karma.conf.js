@@ -3,6 +3,18 @@
 
 module.exports = function (config) {
   config.set({
+    browsers: ['ChromeForCI'],
+    customLaunchers: {
+      ChromeForCI: {
+        base: 'Chrome',
+        flags: [
+          '--no-sandbox',
+          '--disable-gpu',
+          '--headless',
+          '--remote-debugging-port=9222'
+        ]
+      }
+    },
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
