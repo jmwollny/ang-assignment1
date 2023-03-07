@@ -49,3 +49,6 @@ To https://github.com/jmwollny/ang-assignment1.git
 branch 'master' set up to track 'origin/master'.
 ✓ Pushed commits to https://github.com/jmwollny/ang-assignment1.git
 ```
+
+# Building a simple pipeline
+https://serengetitech.com/tech/configuring-angular-jenkins-and-gitlab-for-ci-cd/
