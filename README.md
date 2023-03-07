@@ -1,27 +1,51 @@
 # AngAssignment1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+# Setting up remote github repo
 
-## Development server
+If you haven't installed github CLI then 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`brew install gh`
 
-## Code scaffolding
+In Github generate a token Settings->Developer Settings->Personal access tokens
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`gh auth login`
 
-## Build
+```bash
+? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Paste an authentication token
+Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
+The minimum required scopes are 'repo', 'read:org', 'workflow'.
+? Paste your authentication token: ****************************************
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as jmwollny
+jonathanwollny@Jonathans-MacBook-Air ang-assignment1 % 
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`gh repo create`
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+? What would you like to do? Push an existing local repository to GitHub
+? Path to local repository .
+? Repository name ang-assignment1
+? Description ang-assignment1
+? Visibility Public
+✓ Created repository jmwollny/ang-assignment1 on GitHub
+? Add a remote? Yes
+? What should the new remote be called? origin
+✓ Added remote https://github.com/jmwollny/ang-assignment1.git
+? Would you like to push commits from the current branch to "origin"? Yes
+Enumerating objects: 55, done.
+Counting objects: 100% (55/55), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (51/51), done.
+Writing objects: 100% (55/55), 197.82 KiB | 12.36 MiB/s, done.
+Total 55 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), done.
+To https://github.com/jmwollny/ang-assignment1.git
+ * [new branch]      HEAD -> master
+branch 'master' set up to track 'origin/master'.
+✓ Pushed commits to https://github.com/jmwollny/ang-assignment1.git
+```
