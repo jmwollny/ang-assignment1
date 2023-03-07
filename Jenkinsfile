@@ -12,10 +12,11 @@ pipeline {
     // stage('Unit tests') {
     //     steps { sh 'npm run-script test-headless' }
     // }
-    stage('Docker Build') {
-        agent any
-        steps {
-      	    sh 'docker build -f Dockerfile . -t ng-test-docker'
+    agent { dockerfile true }
+        stage('Test') {
+            steps {
+                sh 'npm run-script test-headless'
+            }
         }
     }
     stage('Tests') {
