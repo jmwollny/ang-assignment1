@@ -24,9 +24,20 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                checkout(changelog: true, scm: [
-                    source: 'https://github.com/jmwollny/ang-assignment1',
-                    revision: params.REV
+                checkout([$class: 'GitSCM', 
+                    branches: [[name: '*/master']], 
+                    doGenerateSubmoduleConfigurations: false, 
+                    extensions: [
+                        [$class: 'CleanBeforeCheckout'], 
+                        [$class: 'RelativeTargetDirectory', relativeTargetDir: 'targetDir']
+                    ], 
+                    submoduleCfg: [], 
+                    userRemoteConfigs: [
+                        [
+                            credentialsId: 'jenkinsserviceaccount',
+                            url: 'https://github.com/jmwollny/ang-assignment1.git'
+                        ]
+                    ]
                 ])
             }
         }
