@@ -19,7 +19,7 @@
 // }
 
 pipeline {
-    agent { label 'alpaca' }
+    agent any
     options { timestamps() }
     stages {
         stage('Checkout Code') {
