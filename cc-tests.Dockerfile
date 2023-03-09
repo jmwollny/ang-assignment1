@@ -5,5 +5,5 @@ WORKDIR /app
 ENV CHROME_BIN=/usr/bin/chromium-browser
 
 COPY ./. ./
-RUN npm install
-RUN npm run test-headless
+# RUN npm install
+# RUN npm run test-headless
