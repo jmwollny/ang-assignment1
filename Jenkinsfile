@@ -74,7 +74,7 @@ pipeline {
             }
             steps {
                 script {
-                    sh "docker build --file cc-tests.Dockerfile --pull --force-rm -t ng-test:latest ."
+                    sh "npm run test-headless"
                 }
             }
         }
