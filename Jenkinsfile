@@ -18,25 +18,25 @@
 //   }
 // }
 
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            agent {
-                docker {
-                    image 'node:current-alpine3.12'
-                    // Run the container on the node specified at the
-                    // top-level of the Pipeline, in the same workspace,
-                    // rather than on a new node entirely:
-                    reuseNode true
-                }
-            }
-            steps {
-                sh 'npm run test-headless'
-            }
-        }
-    }
-}
+// pipeline {
+//     agent any
+//     stages {
+//         stage('Build') {
+//             agent {
+//                 docker {
+//                     image 'node:current-alpine3.12'
+//                     // Run the container on the node specified at the
+//                     // top-level of the Pipeline, in the same workspace,
+//                     // rather than on a new node entirely:
+//                     reuseNode true
+//                 }
+//             }
+//             steps {
+//                 sh 'npm run test-headless'
+//             }
+//         }
+//     }
+// }
 
 pipeline {
     agent any
