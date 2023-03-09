@@ -19,7 +19,9 @@
 // }
 
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:latest' }    
+    }
     options { timestamps() }
     stages {
         stage('Checkout Code') {
