@@ -20,7 +20,7 @@
 
 pipeline {
     agent {
-        docker { image 'node:latest' }    
+        docker { image 'node:current-alpine3.12' }    
     }
     options { timestamps() }
     stages {
