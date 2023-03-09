@@ -43,12 +43,12 @@ pipeline {
                 ])
             }
         }
-        stage('Build service') {
-            steps {
-                sh 'npm install && npm run test-headless'
-            }
-        }
-        stage('Build container') {
+        // stage('Build service') {
+        //     steps {
+        //         sh 'npm install && npm run test-headless'
+        //     }
+        // }
+        stage('Build test container') {
             steps {
                 script {
                     sh "docker build --file cc-tests.Dockerfile --pull --force-rm -t ng-test:latest ."
