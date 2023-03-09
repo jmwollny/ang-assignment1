@@ -21,15 +21,14 @@
 pipeline {
     agent { label 'alpaca' }
     options { timestamps() }
-    parameters {
-        string(name: 'REV', defaultValue: 'release', description: 'Revision to build')
-    }
     stages {
         stage('Checkout Code') {
-            checkout(changelog: true, scm: [
-                source: 'https://github.com/jmwollny/ang-assignment1',
-                revision: params.REV
-            ])
+            steps {
+                checkout(changelog: true, scm: [
+                    source: 'https://github.com/jmwollny/ang-assignment1',
+                    revision: params.REV
+                ])
+            }
         }
         stage('Build service') {
             steps {
