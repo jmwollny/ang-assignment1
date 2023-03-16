@@ -54,3 +54,5 @@ branch 'master' set up to track 'origin/master'.
 https://serengetitech.com/tech/configuring-angular-jenkins-and-gitlab-for-ci-cd/
 
 docker build -f Dockerfile . -t ng-test-docker-copy
+
+HELLO
