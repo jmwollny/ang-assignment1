@@ -1,6 +1,6 @@
 # AngAssignment1
 
-# Setting up remote github repo
+## Setting up remote github repo
 
 If you haven't installed github CLI then 
 
@@ -50,9 +50,7 @@ branch 'master' set up to track 'origin/master'.
 ✓ Pushed commits to https://github.com/jmwollny/ang-assignment1.git
 ```
 
-# Building a simple pipeline
+## Building a simple pipeline
 https://serengetitech.com/tech/configuring-angular-jenkins-and-gitlab-for-ci-cd/
 
 docker build -f Dockerfile . -t ng-test-docker-copy
-
-HELLO
