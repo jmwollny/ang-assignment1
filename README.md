@@ -57,3 +57,4 @@ docker build -f Dockerfile . -t ng-test-docker-copy
 
 ## MORE HERE
 edited by Jon
+edited by jmwollny@yahoo.co.uk
